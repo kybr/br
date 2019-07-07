@@ -2,6 +2,8 @@
 
 #include <stdlib.h>  // malloc
 
+#pragma comment(lib, "ws2_32.lib")
+
 struct br_broadcaster {
   int stuff;
 };
@@ -22,12 +24,15 @@ br_receiver* br_new_receiver(void) {
   return r;
 }
 
-int br_broadcast(br_broadcaster* b, const char* data, int size) {
+void br_free_broadcaster(br_broadcaster* b) {}
+void br_free_receiver(br_receiver* r) {}
+
+int br_broadcast(br_broadcaster* b, const char* data, size_t size) {
   return 0;
   //
 }
 
-int br_receive(br_receiver* r, char* data, int size) {
+int br_receive(br_receiver* r, char* data, size_t* size) {
   return 0;
   //
 }

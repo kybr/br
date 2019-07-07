@@ -1,5 +1,10 @@
 language: c
-os: windows
+
+os:
+  - windows
+  - linux
+  - osx
+
 script:
   - mkdir -p build
   - cd build # kybr/br/build/
@@ -14,10 +19,6 @@ script:
   - cmake --build .
   - cmake --build . --target install
   - cd .. # kybr/br/test/
-  - ls -la
-  - ./000-create-destroy.exe
-  - ./001-broadcaster.exe
-  - ./002-receiver.exe
-  - cd .. # kybr/br/
-  - ls -la 
-  - ls -la test/
+  - ./000-create-destroy
+  - ./001-broadcaster
+  - ./002-receiver
