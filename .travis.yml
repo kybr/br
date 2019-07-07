@@ -9,3 +9,13 @@ script:
   - cmake ..
   - cmake --build .
   - cmake --build . --target install
+  - cd ..
+  - cd test
+  - mkdir -p build
+  - cmake ..
+  - cmake --build .
+  - cmake --build . --target install
+  - cd ..
+  - ./000-create-destroy
+  - ./001-broadcaster
+  - ./002-receiver
