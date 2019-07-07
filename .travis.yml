@@ -2,18 +2,22 @@ language: c
 os: windows
 script:
   - mkdir -p build
-  - cd build
+  - cd build # kybr/br/build/
   - cmake ..
   - cmake --build .
   - cmake --build . --target install
-  - cd ..
-  - cd test
+  - cd .. # kybr/br/
+  - cd test # kybr/br/test/
   - mkdir -p build
+  - cd build # kybr/br/test/build/
   - cmake ..
   - cmake --build .
   - cmake --build . --target install
-  - cd ..
+  - cd .. # kybr/br/test/
   - ls -la
   - ./000-create-destroy.exe
   - ./001-broadcaster.exe
   - ./002-receiver.exe
+  - cd .. # kybr/br/
+  - ls -la 
+  - ls -la test/
