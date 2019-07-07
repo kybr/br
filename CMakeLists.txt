@@ -7,8 +7,15 @@ endif()
 
 #add_library(${PROJECT_NAME} SHARED br.c)
 add_library(${PROJECT_NAME} STATIC br.c)
+#add_library(${PROJECT_NAME} STATIC br.h br.c)
 target_include_directories(${PROJECT_NAME} PRIVATE .)
 set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER br.h)
+
+#set(CMAKE_INSTALL_PREFIX .) # no
+set(CMAKE_INSTALL_PREFIX "${CMAKE_CURRENT_SOURCE_DIR}/install")
+#set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR})
+#set(CMAKE_INSTALL_PREFIX ${CMAKE_HOME_DIRECTORY})
+install(TARGETS ${PROJECT_NAME})
 
 
 

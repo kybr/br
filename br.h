@@ -5,9 +5,6 @@
 extern "C" {
 #endif
 
-//struct br_broadcaster;
-//struct br_receiver;
-
 typedef struct br_broadcaster br_broadcaster;
 typedef struct br_receiver br_receiver;
 
