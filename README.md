@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/kybr/br.svg?branch=master)](https://travis-ci.org/kybr/br)
+
 # br: a framework for efficient\* distribution of ephemeral\*\* data
 
 \* if optimistic/unreliable
