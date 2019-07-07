@@ -13,6 +13,7 @@ script:
   - cmake --build .
   - cmake --build . --target install
   - cd ..
-  - ./000-create-destroy
-  - ./001-broadcaster
-  - ./002-receiver
+  - ls -la
+  - ./000-create-destroy.exe
+  - ./001-broadcaster.exe
+  - ./002-receiver.exe
