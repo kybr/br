@@ -1,12 +1,32 @@
 cmake_minimum_required(VERSION 3.5.1)
 project(br)
 
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Release)
+endif()
+
+#add_library(${PROJECT_NAME} SHARED br.c)
+add_library(${PROJECT_NAME} STATIC br.c)
+target_include_directories(${PROJECT_NAME} PRIVATE .)
+set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER br.h)
+
+
+
+
+
+
+
+#...
 
 if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+  message(STATUS "XXXXXx we got Linux xXXXXXX")
 endif()
 if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+  message(STATUS "XXXXXx we got Darwin xXXXXXX")
 endif()
-
+if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
+  message(STATUS "XXXXXx we got Windows xXXXXXX")
+endif()
 
 message(STATUS "${CMAKE_SYSTEM_NAME} is the system name")
 
@@ -25,8 +45,8 @@ message(STATUS "${CMAKE_SYSTEM_NAME} is the system name")
 #  target_link_libraries(${target} ${libraries})
 #endforeach(source_file)
 
-get_cmake_property(_variableNames VARIABLES)
-list (SORT _variableNames)
-foreach (_variableName ${_variableNames})
-    message(STATUS "${_variableName}=${${_variableName}}")
-endforeach()
+# get_cmake_property(_variableNames VARIABLES)
+# list (SORT _variableNames)
+# foreach (_variableName ${_variableNames})
+#   message(STATUS "${_variableName}=${${_variableName}}")
+# endforeach()
