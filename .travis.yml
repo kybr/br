@@ -3,3 +3,9 @@ os:
   - windows
   - linux
   - osx
+script:
+  - mkdir -p build
+  - cd build
+  - cmake ..
+  - cmake --build .
+  - cmake --build . --target install
