@@ -1,6 +1,8 @@
 #ifndef __BR_91823__
 #define __BR_91823__
 
+#include <stddef.h> // size_t
+
 #ifdef __cplusplus
 extern "C" {
 #endif

@@ -1,6 +1,7 @@
 #include "br.h"
 
 #include <stdlib.h>  // malloc
+#include <stddef.h> // size_t
 
 #pragma comment(lib, "ws2_32.lib")
 
