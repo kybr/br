@@ -1,5 +1,11 @@
 [![Build Status](https://travis-ci.org/kybr/br.svg?branch=master)](https://travis-ci.org/kybr/br)
 
+<!--
+
+[![Build status](https://ci.appveyor.com/api/projects/status/c311nw14jmwq9lv1?svg=true)](https://ci.appveyor.com/project/mantaraya36/allolib)
+
+-->
+
 # br: a framework for efficient\* distribution of ephemeral\*\* data
 
 \* if optimistic/unreliable
